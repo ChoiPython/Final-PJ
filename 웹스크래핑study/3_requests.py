@@ -22,9 +22,9 @@ res2.raise_for_status()
 
 
 # print(len(res.text))
-print(len(res2.text))
+print(len(res.text))
 
 
 # 파일로 만들어보기
 with open("mygoogle.html", "w", encoding="utf-8") as f:
-    f.write(res2.text)
+    f.write(res.text)

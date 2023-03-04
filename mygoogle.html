@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플리마켓</title>
+    <meta name="description" content="대한민국 No.1 FPS 서든어택">
+    <meta name="robots" content="index,follow" />
+    <link rel="Shortcut Icon" href="https://img.sa.nexon.com/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://img.sa.nexon.com/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://img.sa.nexon.com/ssl/trade/styles/vendor.css">
+    <link rel="stylesheet" href="https://img.sa.nexon.com/ssl/trade/styles/exchange_v9.css?v=20230130">
+
+
+    
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_head.js"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/vendor.bundle.js?v=20181213"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/common/knockout-min.js"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/common/vue.min.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/p2/ps.min.js" charset="utf-8" data-name="PS" data-ngm="true" data-nxlogin="true"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/da/a2s.js"></script>
+</head>
+<body class="">
+    <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-89725060-2', 'auto');ga('send', 'pageview');</script>
+    <div id="wrap">
+        <div id="nav">
+            <div id="accordion-icon"><a href="javascript:;"><img src="https://img.sa.nexon.com/trade/images/nav/accordion.png" alt=""></a></div>
+<div id="logo">
+    <a href="https://sa.nexon.com" target="_blank"><img src="https://img.sa.nexon.com/trade/images/nav/logo.png" alt="sudden attack"></a>
+</div>
+<div id="menu">
+    <ul>
+        <li class="menu01"><a href="/">플리마켓</a></li>
+        <li class="menu02"><a href="/Funny/Marble">퍼니라운지</a></li>
+    </ul>
+</div>
+    <div id="corner">
+        <div id="personal">
+            <!-- [D] 비로그인 상태 -->
+            <div class="logout">
+                <div class="account join"><a class="nexon" href="javascript:;" onclick="NXMember.GoLogin();"> <span>넥슨 ID로 </span>로그인<img src="https://img.sa.nexon.com/trade/images/nav/personal.png" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+<!-- [D] Real time alarm -->
+<div id="alert"></div>
+<div id="alert_on_call" style="display: none">
+</div>
+        </div>
+        <div id="body" data-page="">
+            
+
+<div id="accordion-menu">
+    <span>구매</span>
+</div>
+<!-- 2022-12-16 추가 -->
+<div class="item_banner">
+    <div class="one_depth">
+        <p class="img left"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_close_left.png" alt=""></p>
+        <p class="img title"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_close_title.png" alt=""></p>
+        <p class="img right"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_close_right.png" alt=""></p>
+        <p class="mob"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_close_m.png" alt=""></p>
+        <a href="javascript:;" class="open_btn"></a>
+    </div>
+    <div class="two_depth">
+        <p class="img left"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_open_left.png" alt=""></p>
+            <a href="https://sa.nexon.com/news/notice/view.aspx?ArticleSN=125161" target="_blank" class="img title"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_open_title.png" alt=""></a>
+        <p class="img right"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_open_right.png" alt=""></p>
+            <a href="https://sa.nexon.com/news/notice/view.aspx?ArticleSN=125161" target="_blank" class="mob"><img src="https://img.sa.nexon.com/trade/images/banner/item_banner_open_m.png" alt=""></a>
+        <a href="javascript:" class="close_btn"></a>
+    </div>
+</div>
+<!-- //2022-12-16 추가 -->
+<div id="left">
+    <ul class="clear acc1" id="accordion">
+        <li>
+            <a class="active" href="/">
+                <div>
+                    <img src="https://img.sa.nexon.com/trade/images/icon/buy.png">
+                </div>구매
+            </a>
+        </li>
+        <li>
+            <a href="/Trade/Sell">
+                <div>
+                    <img src="https://img.sa.nexon.com/trade/images/icon/sell.png">
+                </div>판매
+            </a>
+        </li>
+        <li>
+            <a href="/Trade/Record">
+                <div>
+                    <img src="https://img.sa.nexon.com/trade/images/icon/history.png">
+                </div>거래내역
+            </a>
+        </li>
+        <li>
+                <a href="/Funny/Marble">
+                    <div>
+                        <img src="https://img.sa.nexon.com/trade/images/icon/funnymarble.png">
+                    </div>퍼니마블
+                </a>
+        </li>
+    </ul>
+    <div id="home">
+        <a href="https://sa.nexon.com/main/index.aspx">
+            <div>
+                <img src="https://img.sa.nexon.com/trade/images/icon/home.png">
+            </div>서든어택 HOME
+        </a>
+    </div>
+</div>
+<div id="right">
+    <h2 class="h2">아이템 구매</h2>
+    <div class="pointView">
+        <span id="span_shotpoint_default2"></span>
+        <span class="sp-icon"><img src="https://img.sa.nexon.com/trade/images/nav/number_sp.png" alt=""></span>
+        <a class="toggle-search" href="javascript:;" onclick="$('.search').show();"> <img src="https://img.sa.nexon.com/trade/images/icon/search_toggle.png" alt="검색"></a>
+    </div>
+    <div class="search">
+            <a class="targetItem" href="https://sa.nexon.com/news/notice/view.aspx?ArticleSN=125161" target="_blank">거래대상 아이템</a>
+        <a class="search-back" href="javascript:;" onclick="searchBackList();" style="display:none;"><img src="https://img.sa.nexon.com/trade/images/icon/back.png" alt=""></a>
+        <input type="text" placeholder="아이템명 검색" id="txt_search">
+        <a href="javascript:;" class="searchIcon" onclick="_searchList();"><img src="https://img.sa.nexon.com/trade/images/icon/search.png" alt=""></a>
+        <a class="searchClose" href="javascript:;" onclick="$('.search').css({'display': ''}).addClass('addButton');"><img src="https://img.sa.nexon.com/trade/images/icon/close.png" alt=""></a>
+    </div>
+    <div class="sort">
+        <div class="category">
+            <div class="category-menu">
+                <a href="javascript:;" onclick="$('.category ul').toggle();">전체<img src="https://img.sa.nexon.com/trade/images/icon/select.png" alt=""></a>
+            </div>
+        </div>
+        <!--[START] 20210429 검색필터 개선-->
+        <div class="filter">
+            <div class="filter-list">
+                <ul class="clear">
+                    <li><a href="javascript:;"> <span class="text"> <span class="span_itemCategory">카테고리 전체</span></span><span class="text"> <span class="span_itemPeriod">기간 전체</span></span><span class="text"> <span class="span_itemPrice">가격 전체</span></span><span class="arrow"></span></a></li>
+                </ul>
+            </div>
+            <div class="filter-box">
+                <div class="filter-scroll">
+                    <div class="filter-select filter-category">
+                        <div class="filter-title"> <strong>아이템 카테고리</strong><a class="all text active" href="javascript:;" onclick="_redirectCategory('all', null, this);">전체</a></div>
+                        <ul>
+                            <li>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('cha', null, this);">캐릭터 전체 </a><a class="text" href="javascript:;" onclick="_redirectCategory('cha', 'ent', this);">연예인 캐릭터 </a><a class="text" href="javascript:;" onclick="_redirectCategory('cha', 'fun', this);">퍼니 캐릭터</a><a class="text" href="javascript:;" onclick="_redirectCategory('cha', 'col', this);">컬렉션북 캐릭터</a>
+                            </li>
+                            <li>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', null, this);">무기 전체</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'ra', this);">돌격소총</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'sn', this);">저격소총</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'sp', this);">특수총</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'as', this);">보조무기</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'ap', this);">근접무기</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'tw', this);">투척무기</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'etc', this);">기타무기</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('wea', 'col', this);">컬렉션북 무기</a>
+                            </li>
+                            <li>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('nm', null, this);">일반 아이템 전체</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('nm', 'utz', this);">이용권</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('nm', 'suv', this);">생존 아이템</a>
+                                <a class="text" href="javascript:;" onclick="_redirectCategory('nm', 'etc', this);">기타 아이템</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-select period filter-period">
+                        <div class="filter-title"> <strong>기간</strong><a class="all text active" href="javascript:;" onclick="_redirectPeriod(0, this);">전체</a></div>
+                        <ul>
+                            <li>
+                                <a class="text" href="javascript:;" onclick="_redirectPeriod(1, this);">1일</a><a class="text" href="javascript:;" onclick="_redirectPeriod(3, this);">~3일</a><a class="text" href="javascript:;" onclick="_redirectPeriod(7, this);">~7일</a><a class="text" href="javascript:;" onclick="_redirectPeriod(30, this);">~30일</a><a class="text" href="javascript:;" onclick="_redirectPeriod(90, this);">~90일</a><a class="text" href="javascript:;" onclick="_redirectPeriod(100, this);">100일~</a><a class="text" href="javascript:;" onclick="_redirectPeriod(150, this);">150일~</a><a class="text" href="javascript:;" onclick="_redirectPeriod(998, this);">영구제</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-select price filter-price">
+                        <div class="filter-title"> <strong>가격</strong><a class="all text active" href="javascript:;" onclick="_redirectPrice(0, this);">전체</a></div>
+                        <ul>
+                            <li><a class="text" href="javascript:;" onclick="_redirectPrice(1000, this);">~1천</a><a class="text" href="javascript:;" onclick="_redirectPrice(3000, this);">~3천</a><a class="text" href="javascript:;" onclick="_redirectPrice(10000, this);">~1만</a><a class="text" href="javascript:;" onclick="_redirectPrice(30000, this);">~3만</a><a class="text" href="javascript:;" onclick="_redirectPrice(50000, this);">~5만</a><a class="text" href="javascript:;" onclick="_redirectPrice(50001, this);">5만~</a><a class="text" href="javascript:;" onclick="_redirectPrice(100000, this);">10만~</a><a class="text" href="javascript:;" onclick="_redirectPrice(200000, this);">20만~</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-button"> <a class="reset" href="javascript:;" onclick="clearFilter();">초기화</a><strong><span class="span_itemCategory">카테고리 전체</span>, <span class="span_itemPeriod">기간 전체</span>, <span class="span_itemPrice">가격 전체</span></strong></div><a class="filter-close" href="javascript:;" onclick="filter.close()"> </a>
+            </div>
+        </div>
+        <!--[END] 20210429 검색필터 개선-->
+        
+    </div>
+    <div class="result">
+        <div class="total">
+            총
+            <span class="orange" id="span_totalCnt">0</span>건의 판매 등록 상품
+        </div>
+        <div class="select">
+            <select id="ddl_ordering" name="ddl_ordering" onchange="_redirectOrdering(this.value)"><option value="0">인기순</option>
+<option value="1">상품등록순</option>
+<option value="2">낮은 가격순</option>
+<option value="3">높은 가격순</option>
+</select>
+        </div>
+    </div>
+    <div class="item-list show-cursor">
+        <ul class="clear" id="ul_list">
+        </ul>
+
+
+
+    </div>
+    <div class="inventory-search" style="display:none;">
+        <img src="https://img.sa.nexon.com/trade/images/loading_005.gif" alt="">
+        <div>
+            <b>아이템 정보를 조회 중</b>입니다.
+            <br>잠시만 기다려 주세요.
+        </div>
+    </div>
+    
+            <a href="https://barracks.sa.nexon.com/shield" a2s="click" obj="TRADE_O_PR" opt='{"Name" : "SHIELD_TRADE"}' target="_blank" class="event_banner" style=" position:absolute; top:60px; right:-160px"><img src="https://img.sa.nexon.com/assets/common/quick/a3.png" alt="" /></a>
+</div>
+
+<div id="exchangeSell" class="layer-popup" style="display: none;" data-purchase="0" data-sell="0" data-type="purchase"></div>
+<div id="exchangeSpecial" class="layer-popup" style="display: none;" data-purchase="0" data-sell="0" data-type="purchase"></div>
+
+
+<input id="hid_category" name="hid_category" type="hidden" value="all" />
+<input id="hid_category_sub" name="hid_category_sub" type="hidden" value="all" />
+<input id="hid_ordering" name="hid_ordering" type="hidden" value="0" />
+
+<input id="minPrice" name="minPrice" type="hidden" value="0" />
+<input id="maxPrice" name="maxPrice" type="hidden" value="0" />
+<input id="minPeriod" name="minPeriod" type="hidden" value="0" />
+<input id="maxPeriod" name="maxPeriod" type="hidden" value="0" />
+<input id="searchTxt" name="searchTxt" type="hidden" value="" />
+
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/chart/highcharts.js"></script>
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/chart/exporting.js"></script>
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/jquery.lazy.min.js"></script>
+<script>
+    //**********signalR**********//
+    $("#body").data("page", "list");
+    //**********signalR**********//
+
+    var AntiForgeryTokenForAjaxPost = "2CGoiMnQ8sLfKQubPffOmbKCg4DfrSXiKWnbchzk0xlOaAePmFVGXg9WTf9rhusz7arRIQK6_cfmChN9_L-j-RrhtXc1";
+    var headers = {};
+    headers['__RequestVerificationToken'] = AntiForgeryTokenForAjaxPost;
+
+    var isPageLoading = false;
+
+    $(".menu01").addClass('active');
+
+    $(document).ready(function () {
+        _setSpecialCountdown();
+
+        var pcookie = Cookie.getCookie('pOrderingValue');
+        var ordering = "0";
+        if (pcookie == "")
+            ordering = $("#hid_ordering").val();
+        else
+            ordering = pcookie;
+
+        $("#ddl_ordering").val(ordering);
+        $("#hid_ordering").val(ordering);
+
+        isPageLoading = true;
+        IsRunning = true;
+        $(".inventory-search").show();
+        $(".item-list").hide();
+        $.post("/Trade/GoodsList", { "page_no": PageNo, "ordering": ordering },
+            function (data) {
+                PageNo = 2;
+                $("#ul_list").append(data);
+                IsRunning = false;
+                isPageLoading = false;
+                $(".inventory-search").hide();
+                $(".item-list").show();
+                _lazyImg();
+            });
+
+        //Filter.clearPriceFilter();
+        //Filter.clearPeriodFilter();
+
+        $("#txt_search").keypress(function () {
+            if (event.keyCode === 13) {
+                var idObject = "#txt_search";
+                var strSearchWord = $.trim($(idObject).val());
+                if (strSearchWord === "") {
+                    pAlert("", "검색어를 입력하세요.");
+                    $(idObject).focus();
+                    return false;
+                }
+                else if (strSearchWord.length <= 1) {
+                    pAlert("", "검색어를 두 글자 이상 입력하세요.");
+                    $(idObject).focus();
+                    return false;
+                }
+                else {
+                    _searchList();
+                }
+            }
+        });
+
+        var inventoryValue = '';
+
+        if (inventoryValue.length > 0) {
+            $("#span_inventory_value").html(inventoryValue);
+            $(".inven_value").addClass("view");
+        }
+
+        $(document).on("click", ".inven_value .change", function () {
+            Cookie.setCookie("inventoryTotalValueFlag", "S");
+            $(".inven_value").removeClass("bar").addClass("small");
+        });
+
+        $(document).on("click", ".inven_value.small .cont", function () {
+            Cookie.setCookie("inventoryTotalValueFlag", "E");
+            $(".inven_value").addClass("bar").removeClass("small");
+        });
+
+        var iCookie = Cookie.getCookie('inventoryTotalValueFlag');
+        if (iCookie == "S")
+            $(".inven_value").removeClass("bar").addClass("small");
+        else {
+            $(".inven_value").addClass("bar").removeClass("small");
+        }
+
+        /* 2022-12-16 추가 */
+        $(window).resize(function () {
+            if ($(".item_banner").size() > 0) {
+                if (window.innerWidth > 1048) {
+                    if ($("#menu").size() > 0) {
+                        $("#body").css("padding-top", "100px")
+                    } else {
+                        $("#body").css("padding-top", "80px")
+                    }
+                } else {
+                    if ($("#menu").size() > 0) {
+                        $("#body").css("padding-top", "120px")
+                    } else {
+                        $("#body").css("padding-top", "80px")
+                    }
+                }
+            }
+        }); $(window).resize();
+
+        $(document).on("click", ".item_banner .open_btn", function () {
+            if (!$(".item_banner").hasClass("on")) {
+                $(".item_banner").addClass("on")
+            }
+        })
+
+        $(document).on("click", ".item_banner .close_btn", function () {
+            if ($(".item_banner").hasClass("on")) {
+                $(".item_banner").removeClass("on")
+            }
+        })
+/* //2022-12-16 추가 */
+    });
+
+    function _redirectCategory(category, category_sub, obj) {
+        if (isPageLoading)
+            return false;
+
+        if (category != null)
+            $("#hid_category").val(category);
+
+        if (category_sub != null)
+            $("#hid_category_sub").val(category_sub);
+        else
+            $("#hid_category_sub").val('all');
+
+        endPage = false;
+
+        var _filterTxt = "";
+        if ($(obj).text() == "전체") {
+            _filterTxt = "카테고리 전체";
+            $(".span_itemCategory").removeClass("active");
+        }
+        else {
+            _filterTxt = $(obj).text();
+            $(".span_itemCategory").addClass("active");
+        }
+       // var _filterTxt = $(obj).text() == "전체" ? "카테고리 전체" : $(obj).text();
+        $(".span_itemCategory").html(_filterTxt);
+        $(".filter-category a").removeClass("active");
+        $(obj).addClass("active");
+
+        _filterList();
+
+    }
+
+    function _redirectPeriod(period, obj) {
+        if (period == 0) {
+            $("#minPeriod").val(0);
+            $("#maxPeriod").val(0);
+        }
+        else if (period < 100) {
+            $("#minPeriod").val(1);
+            $("#maxPeriod").val(period);
+        }
+        else {
+            $("#minPeriod").val(period);
+            $("#maxPeriod").val(999);
+        }
+
+        var _filterTxt = "";
+        if ($(obj).text() == "전체") {
+            _filterTxt = "기간 전체";
+            $(".span_itemPeriod").removeClass("active");
+        }
+        else {
+            _filterTxt = $(obj).text();
+            $(".span_itemPeriod").addClass("active");
+        }
+       // var _filterTxt = $(obj).text() == "전체" ? "기간 전체" : $(obj).text();
+        $(".span_itemPeriod").html(_filterTxt);
+        $(".filter-period a").removeClass("active");
+        $(obj).addClass("active");
+
+        _filterList();
+
+    }
+
+    function _redirectPrice(price, obj) {
+        if (price == 0) {
+            $("#minPrice").val(0);
+            $("#maxPrice").val(0);
+        }
+        else if (price <= 50000) {
+            $("#minPrice").val(1);
+            $("#maxPrice").val(price);
+        }
+        else {
+            price = price == 50001 ? 50000 : price;
+            $("#minPrice").val(price);
+            $("#maxPrice").val(300000);
+        }
+
+        var _filterTxt = "";
+        if ($(obj).text() == "전체") {
+            _filterTxt = "가격 전체";
+            $(".span_itemPrice").removeClass("active");
+        }
+        else {
+            _filterTxt = $(obj).text();
+            $(".span_itemPrice").addClass("active");
+        }
+       // var _filterTxt = $(obj).text() == "전체" ? "가격 전체" : $(obj).text();
+
+        $(".span_itemPrice").html(_filterTxt);
+        $(".filter-price a").removeClass("active");
+        $(obj).addClass("active");
+
+        _filterList();
+
+    }
+
+    function _redirectOrdering(ordering) {
+        if (isPageLoading)
+            return false;
+
+        $("#hid_ordering").val(ordering);
+        endPage = false;
+
+        _filterList();
+
+        Cookie.setCookie("pOrderingValue", ordering);
+
+    }
+
+    searchBackList = function () {
+        $.post("/Trade/GoodsList", { "page_no": 1, "ordering": $("#hid_ordering").val() },
+            function (data) {
+                PageNo = 2;
+                $("#ul_list").html(data);
+                _lazyImg();
+                IsRunning = false;
+                endPage = false;
+            });
+        $(".search-back").hide();
+        $(".search").removeClass("addButton");
+        $('#txt_search').val('');
+        $('#searchTxt').val('');
+
+        clearFilterObj();
+
+        //Filter.clearPeriodFilter();
+        //Filter.clearPriceFilter();
+        //$("#hid_category").val("all");
+        //$("#hid_category_sub").val("all");
+        //$("#span_itemCategory").html("아이템 구분");
+        //$("#span_itemPrice").html("판매 가격");
+        //$("#span_itemPeriod").html("아이템 기간");
+
+        IsSearch = false;
+    }
+
+    clearFilter = function () {
+        if (IsFilter == false)
+            return false;
+
+        IsRunning = true;
+        endPage = false;
+        PageNo = 1;
+        if ($('#searchTxt').val() != '') {
+            _searchListFunc();
+            IsFilter = false;
+        }
+        else {
+            $.post("/Trade/GoodsList", { "page_no": PageNo, "ordering": $("#hid_ordering").val() },
+                function (data) {
+                    PageNo = PageNo + 1;
+                    $(".inventory-search").hide();
+                    $("#ul_list").html(data);
+                    _lazyImg();
+                    IsRunning = false;
+                    IsFilter = false;
+                    IsSearch = false;
+
+                });
+        }
+        clearFilterObj();
+    }
+
+    clearFilterObj = function () {
+        $("#hid_category").val("all");
+        $("#hid_category_sub").val("all");
+
+        $("#minPeriod").val(0);
+        $("#maxPeriod").val(0);
+
+        $("#minPrice").val(0);
+        $("#maxPrice").val(0);
+
+        $(".filter-category a").removeClass("active");
+        $(".filter-period a").removeClass("active");
+        $(".filter-price a").removeClass("active");
+
+        $(".filter-category .all").addClass("active");
+        $(".filter-period .all").addClass("active");
+        $(".filter-price .all").addClass("active");
+
+        $(".span_itemCategory").html("카테고리 전체");
+        $(".span_itemPrice").html("기간 전체");
+        $(".span_itemPeriod").html("가격 전체");
+
+        $(".span_itemCategory").removeClass("active");
+        $(".span_itemPrice").removeClass("active");
+        $(".span_itemPeriod").removeClass("active");
+    }
+
+    function _openPopup(sn) {
+        $.ajax({
+            url: "/Trade/Detail",
+            type: "GET",
+            data: { goods_no: sn, rd: Math.random() },
+            dataType: "html",
+            contentType: "application/html; charset=utf-8",
+            success: function (data) {
+                $('#exchangeSell').html(data);
+                layerPopupOpen("#exchangeSell");
+                //**********signalR**********//
+                $('#exchangeSell').data("purchase", sn);
+                joinGroup(sn);
+                //**********signalR**********//
+            },
+            error: function (xhr) {
+                pAlert("inner","에러가 발생하였습니다" + xhr.responseText);
+            }
+        });
+    }
+
+    function _openSpecialPopup(sn) {
+        $.ajax({
+            url: "/Trade/SpecialDetail",
+            type: "GET",
+            data: { goods_no: sn, rd: Math.random() },
+            dataType: "html",
+            contentType: "application/html; charset=utf-8",
+            success: function (data) {
+                $('#exchangeSpecial').html(data);
+                layerPopupOpen("#exchangeSpecial");
+                //**********signalR**********//
+                $('#exchangeSpecial').data("purchase", sn);
+                joinGroup(sn);
+                //**********signalR**********//
+            },
+            error: function (xhr) {
+                pAlert("inner", "에러가 발생하였습니다" + xhr.responseText);
+            }
+        });
+    }
+
+    var PageNo = 1;
+    var EndData = false;
+    var IsRunning = false;
+    var IsFilter = false;
+    var IsSearch = false;
+    var category = null;
+    var category_sub = null;
+    var endPage = false;
+
+    $(window).scroll(function () {
+
+        $(".lazy").lazy({
+            effect: 'fadeIn'
+            //,chainable: false
+        });
+
+        if ($(window).scrollTop() + $(window).height() >= $(document).height() - ($(".item-list li:first").outerHeight() / 2) && !EndData && !IsRunning) {
+            if (endPage)
+                return false;
+
+            IsRunning = true;
+            $(".inventory-search").show();
+            var _searchTxt = IsSearch == true && $('#searchTxt').val().length > 1 ? $('#searchTxt').val() : null;
+
+            category = $("#hid_category").val();
+
+            if (category.length > 0)
+                category_sub = $("#hid_category_sub").val();
+            if (IsFilter == false && IsSearch == false)
+            {
+                $.post("/Trade/GoodsList", { "page_no": PageNo, "ordering": $("#hid_ordering").val()},
+                    function (data) {
+                        PageNo = PageNo + 1;
+                        $(".inventory-search").hide();
+                        $("#ul_list").append(data);
+                        IsRunning = false;
+                        _lazyImg();
+                    });
+            }
+            else if (IsFilter == false && IsSearch == true)
+            {
+                $.post("/Trade/GoodsSearchList", { "page_no": PageNo, "category": $("#hid_category").val(), "ordering": $("#hid_ordering").val(), "search_goods_name": _searchTxt},
+                    function (data) {
+                        PageNo = PageNo + 1;
+                        $(".inventory-search").hide();
+                        $("#ul_list").append(data);
+                        IsRunning = false;
+                        _lazyImg();
+                    });
+            }
+            else
+            {
+                $.post("/Trade/GoodsFilterList", {
+                        "page_no": PageNo, "category": category, "ordering": $("#hid_ordering").val(),
+                        "category_sub": category_sub, "min_price": $("#minPrice").val(), "max_price": $("#maxPrice").val(),
+                        "start_period": $("#minPeriod").val(), "end_period": $("#maxPeriod").val(), "search_goods_name": _searchTxt
+                    },
+                    function (data) {
+                        PageNo = PageNo + 1;
+                        $(".inventory-search").hide();
+                        $("#ul_list").append(data);
+                        IsRunning = false;
+                        _lazyImg();
+                    });
+            }
+        }
+    });
+
+    _lazyImg = function () {
+        $(".lazy").each(function () {
+            $(this).attr("src", $(this).attr("data-src"));
+            $(this).removeAttr("data-src");
+        });
+
+    }
+
+    _searchList = function () {
+        if (isPageLoading)
+            return false;
+
+        var _searchTxt = $('#txt_search').val();
+
+        if (_searchTxt.length < 2) {
+            pAlert('','검색할 아이템명을 2자이상 입력해 주세요.');
+            return false;
+        }
+        $('#searchTxt').val(_searchTxt);
+        IsSearch = true;
+        _searchListFunc();
+        $(".search-back").show();
+        $(".search").addClass('addButton');
+
+        clearFilterObj();
+        //Filter.clearPeriodFilter();
+        //Filter.clearPriceFilter();
+
+        //$("#hid_category").val("all");
+        //$("#hid_category_sub").val("all");
+
+        //$("#span_itemCategory").html("아이템 구분");
+        //$("#span_itemPrice").html("판매 가격");
+        //$("#span_itemPeriod").html("아이템 기간");
+    }
+
+    _searchListFunc = function () {
+        isPageLoading = true;
+        $(".inventory-search").show();
+        $(".item-list").hide();
+
+        PageNo = 1;
+        endPage = false;
+        setTimeout(function () {
+            $.post("/Trade/GoodsSearchList", { "page_no": PageNo, "category": $("#hid_category").val(), "ordering": $("#hid_ordering").val(), "search_goods_name": $('#searchTxt').val() },
+                function (data) {
+                    $("#ul_list").html(data);
+                    //$('#searchTxt').val(_searchTxt);
+                    $(".inventory-search").hide();
+                    $(".item-list").show();
+                    IsSearch = true;
+                    PageNo = 2;
+                    isPageLoading = false;
+
+                    _lazyImg();
+                });
+        }, 1000);
+    }
+
+    function _filterList() {
+        category = $("#hid_category").val();
+        var _searchTxt = (IsSearch == true && $('#searchTxt').val().length > 1) ? $('#searchTxt').val() : null;
+
+        if (category.length > 0)
+            category_sub = $("#hid_category_sub").val();
+
+        PageNo = 1;
+        endPage = false;
+        $.post("/Trade/GoodsFilterList", {
+                "page_no": PageNo, "category": category, "ordering": $("#hid_ordering").val(),
+                "category_sub": category_sub, "min_price": $("#minPrice").val(), "max_price": $("#maxPrice").val(),
+                "start_period": $("#minPeriod").val(), "end_period": $("#maxPeriod").val(), "search_goods_name": _searchTxt
+            },
+            function (data) {
+                $("#ul_list").html(data);
+                IsFilter = true;
+                PageNo = 2;
+
+                _lazyImg();
+            });
+    }
+
+    function _setSpecialCountdown() {
+        $('[data-countdown]').each(function () {
+            $(this).countdown($(this).data('countdown'))
+                .on('update.countdown', function (event) {
+                    var hh = event.offset.totalDays * 24 + event.offset.hours;
+                    $(this).html(event.strftime("<span class='num'>" + hh + "</span>시간 <span class='num'> %M</span>분"));
+                })
+                .on('finish.countdown', function (event) {
+                    $(this).parent().find("span:first").html("");
+                    $(this).html("새로고침 해주세요.");
+                });
+        });
+    }
+
+        getInventoryTotalValue = function () {
+
+            if (!$(".inven_value").hasClass("view")) {
+                $(".inven_value .cont .btn").addClass("on");
+                $(".inven_value.bar .cont .btn span").text("갱신 중");
+
+                var refresh = setTimeout(function () {
+                    $(".inven_value").addClass("view");
+                }, 10000)
+
+                $.ajax({
+                    type: "POST"
+                    , url: "/TradeAjax/GetInventoryTotalValue"
+                    , data: { rd: Math.random() }
+                    , dataType: "json"
+                    , async: false
+                    , contentType: "application/json; charset=utf-8"
+                    , headers: headers
+                    , success: function (data) {
+                        if (data.rtnCode == 50) {
+                            $("#span_inventory_value").html(data.totalSP);
+
+                            inventoryValueSyncTIme = data.spSyncTime;
+                            if (!$(".inven_value").hasClass("view")) {
+                                $(".inven_value").addClass("view");
+                                clearTimeout(refresh);
+                            }
+
+
+                        }
+                        else if (data.rtnCode == 0) {
+                            $("#span_inventory_value").html(data.totalSP);
+                            inventoryValueSyncTIme = data.spSyncTime;
+
+                            setTimeout(function () {
+                                if (!$(".inven_value").hasClass("view")) {
+                                    $(".inven_value").addClass("view");
+                                }
+                            }, 3000)
+
+                        }
+                        else {
+                            pAlert("reload", data.errorMessage + "[" + data.rtnCode + "]");
+                            $(".inven_value .cont .btn").removeClass("on");
+                            $(".inven_value.bar .cont .btn span").text("조회하기");
+                            isRefresh = true;
+                        }
+                    }
+                    , error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+            }
+        }
+
+        getInventoryRefresh = function (obj) {
+
+            //if (!isRefresh) {
+            //    alert("10분 이내에 다시 갱신할 수 없습니다.");
+            //    return;
+            //}
+
+            if (!$(obj).hasClass("on")) {
+                $(obj).addClass("on");
+                $(obj).find("span").text("갱신 중");
+
+                var refresh = setTimeout(function () {
+                    $(".inven_value .cont .refresh").removeClass("on");
+                    $(".inven_value .cont .refresh span").text("새로고침");
+                }, 10000)
+
+                $.ajax({
+                    type: "POST"
+                    , url: "/TradeAjax/GetInventoryTotalValue"
+                    , data: { rd: Math.random() }
+                    , dataType: "json"
+                    , async: false
+                    , contentType: "application/json; charset=utf-8"
+                    , headers: headers
+                    , success: function (data) {
+                        if (data.rtnCode == 50) {
+                            inventoryValueSyncTIme = data.spSyncTime;
+
+                            if ($(obj).find("span").text() == "갱신 중") {
+                                $(".inven_value .cont .refresh").removeClass("on");
+                                $(".inven_value .cont .refresh span").text("새로고침");
+                                clearTimeout(refresh);
+                            }
+
+                            alert("10분 이내에 다시 갱신할 수 없습니다.");
+
+                        }
+                        else if (data.rtnCode == 0) {
+
+                            $("#span_inventory_value").html(data.totalSP);
+                            inventoryValueSyncTIme = data.spSyncTime;
+
+                            setTimeout(function () {
+                                if ($(obj).find("span").text() == "갱신 중") {
+                                    $(".inven_value .cont .refresh").removeClass("on");
+                                    $(".inven_value .cont .refresh span").text("새로고침");
+                                }
+                            }, 3000)
+
+                        }
+                        else {
+                            pAlert("reload", data.errorMessage + "[" + data.rtnCode + "]");
+                            isRefresh = true;
+
+                        }
+                    }
+                    , error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+            }
+        }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".lazy").lazy();
+    });
+
+</script>
+
+
+        </div>
+    </div>
+    <input id="visble_tag" name="visble_tag" type="hidden" value="N" />
+
+    <script src="https://img.sa.nexon.com/trade/scripts/jquery/jquery.signalR-2.3.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="https://img.sa.nexon.com/trade/scripts/common/ssl/signalR.trade.js?v=20210601"></script>
+    <script src="https://img.sa.nexon.com/trade/scripts/common/ssl/trade_20220908.js?v=20220901"></script>
+    <script type="text/javascript" src="https://img.sa.nexon.com/trade/scripts/jquery/exchange.bundle_v3.js?v=20220725"></script>
+
+    
+
+    <script>
+        //document.domain = "nexon.com";
+        $(document).keydown(function (e) {
+            if (e.keyCode == 13 && $('#pAlert').length > 0) {
+                $('#PalertEvent').click();
+                return false;
+            }
+        });
+
+        $("body").css("background-color", "white");
+    </script>
+</body>
+</html>
